@@ -1,0 +1,128 @@
+:root {
+  --yellow: rgb(249, 210, 73);
+  --gray: rgb(92, 88, 88);
+  --red: rgb(88, 5, 5);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  background-color: var(--yellow);
+}
+
+section {
+  width: 80%;
+  max-width: 700px;
+  margin: 50px auto;
+  /* background-color: aqua; */
+}
+
+/* FORM */
+
+form {
+  margin: 15px;
+  padding: 5px;
+}
+
+h3 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.form-control {
+  padding: 10px 0;
+  /* background-color: brown; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.form-control input {
+  width: 70%;
+  border-radius: 18px;
+  border: transparent;
+  padding: 15px 10px;
+  margin: 5px;
+}
+
+.submit-btn {
+  background-color: var(--gray);
+  border: transparent;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  border-radius: 18px;
+  color: white;
+  letter-spacing: 2px;
+  margin: 5px;
+}
+
+/* TO-DO LIST */
+.todo-list-container {
+  border-radius: 5px;
+  /* visibility: hidden; */
+
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list-container.show-container {
+  background-color: white;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  visibility: visible;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.todo-item:last-child {
+  border-bottom: 0;
+}
+
+.todo-item p {
+  font-size: 20px;
+  padding: 20px;
+  /* background-color: violet; */
+  flex: 1;
+}
+
+input[type='checkbox'] {
+  margin: 20px;
+}
+
+input:checked + p {
+  background: #f9f9f9;
+  text-decoration: line-through;
+}
+
+.edit-btn,
+.delete-btn {
+  /* background: transparent; */
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+  transition: var(--transition);
+}
+
+.clear-btn {
+  width: 120px;
+  height: 30px;
+  margin: 10px auto;
+  background-color: var(--red);
+  border: transparent;
+  height: 30px;
+  text-align: center;
+  border-radius: 18px;
+  color: white;
+  letter-spacing: 2px;
+}
